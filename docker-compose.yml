@@ -32,7 +32,7 @@ services:
       TZ: "Europe/Brussels"
     volumes:
     # mount the same volume used by server, but read-only
-    - data:/data:ro
+    - data:/data
     # use a host attached directory so that it in turn can be backed up
     # to external/cloud storage
     - ./mc-backups:/backups
