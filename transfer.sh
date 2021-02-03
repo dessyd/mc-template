@@ -1,11 +1,10 @@
 #!/bin/bash
-USER=some-user
-HOST=some-host
-SSH_PORT=22
-SSH_IDENTITY=""
+USER=<user>
+HOST=<host>
+SSH_PORT=<port>
+SSH_IDENTITY="~/.ssh/<id_file>"
 CONTAINER=${PWD##*/}_backups_1
-SOURCE="~/mc/Biomes/mc-backups/world-20210201-105513.tgz"
-echo "Source: $SOURCE"
+SOURCE="~/mc/Biomes/mc-backups/latest.tgz"
 
 docker-compose stop mc
 echo "Transfering world ..."
