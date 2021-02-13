@@ -18,6 +18,7 @@ services:
     volumes:
     # use a named, managed volume for data volume
     - data:/data
+
   backups:
     image: itzg/mc-backup
     environment:
@@ -30,6 +31,7 @@ services:
       # instead of network_mode below, could declare RCON_HOST
       RCON_HOST: mc
       TZ: "Europe/Brussels"
+    restart: always
     volumes:
     # mount the same volume used by server, but read-only
     - data:/data
